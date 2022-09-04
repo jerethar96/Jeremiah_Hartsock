@@ -90,6 +90,8 @@ span {
     /* IE10 */
     flex: 80%;
     background-image: url("https://images.unsplash.com/photo-1514810771018-276192729582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     padding: 20px;
 }
 
@@ -108,7 +110,7 @@ remove margins so there's no space between title and subtitle*/
 .container {
     position: relative;
     width: 100%;
-    padding: 5px;
+    padding: 0px;
 }
 
 /* This makes images responsive */
@@ -125,7 +127,7 @@ remove margins so there's no space between title and subtitle*/
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
     color: #e7e2e2; 
-    width: 94%;
+    width: 100%;
     transition: .5s ease;
     opacity:0;
     color: white;
@@ -146,7 +148,7 @@ remove margins so there's no space between title and subtitle*/
     background: rgb(0, 0, 0); /* Fallback color */
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
     color: #f1f1f1;
-    width: 95%;
+    width: 100%;
     padding: 0px;
 }
 
