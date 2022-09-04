@@ -114,7 +114,7 @@ remove margins so there's no space between title and subtitle*/
 /* This makes images responsive */
 .img{
     display:block;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
