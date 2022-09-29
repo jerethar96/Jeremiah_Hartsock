@@ -83,6 +83,9 @@ nav a:hover {
 .side h3 {
     margin:0;
 }
+.side p {
+    font-size:70%;
+}
 
 /* Main column */
 main {
@@ -100,10 +103,17 @@ remove margins so there's no space between title and subtitle*/
 main h2,h5 {
     text-align:center;
     margin: 0;
+    font-family: 'Playfair Display', serif;
 }
 
 main h3 {
     margin:0;
+    font-family: 'Playfair Display', serif;
+}
+
+main p {
+    font-size: 80%;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Image background and format */
@@ -111,7 +121,8 @@ main h3 {
     position: relative;
     width: 100%;
     padding: 0px;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5)
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    height: auto;
 }
 
 /* This makes images responsive */
@@ -135,6 +146,8 @@ main h3 {
     font-size: 20px;
     padding: 20px;
     text-align: center;
+    font-size:smaller;
+    font-family: 'Playfair Display', serif;
 }
 
 /* When container is moused over, the overlay fades in*/
@@ -151,8 +164,14 @@ main h3 {
     color: #f1f1f1;
     width: 100%;
     padding: 0px;
+    font-size: small;
+    font-family: 'Playfair Display', serif;
 }
 
+.content p {
+    font-size: x-small;
+    font-family: 'Playfair Display', serif;
+}
 
 /* The bottom two responsive layouts are directly from this link on https://www.w3schools.com/howto/howto_make_a_website.asp */
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
