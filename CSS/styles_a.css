@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+} 
+    
+    :root{
+        --main-bg-color: #9bc6e9;
+    }
+
+
+body {
+font-family: 'Playfair Display', serif;
+font: 100%;
+margin: 2.5em;
+background-color: var(--main-bg-color);
+}
+
+.wrapper {
+display: flex;
+flex-direction: column;
+gap: .5em;
+row-gap: .5em;
+}
+
+.content-wrapper {
+display: flex;
+flex-direction: row;
+gap: .5em;
+row-gap: .5em;
+}
+
+span {
+    font-style: italic;
+    color: 	#931D9A;
+}
+
+header, footer, aside, section {
+    border-radius: .313em;
+    padding: .625em;
+    font-size: 130%;
+}
+header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+footer{
+    text-align: right;
+}
+
+header, footer { background-color:rgb(55, 226, 175); }
+aside { 
+    background-color: plum; 
+    align-items: center;
+    justify-content: center;
+}
+
+aside h3, p{
+    margin-bottom:0;
+    font-size:large;
+    font-family:'Playfair Display', serif;
+}
+
+section { background-color: steelblue;}
+
+
+.media-object {
+display: flex;
+align-items: center;
+padding: 1em;
+border-radius: 1px;
+max-width: auto;
+}
+
+.media-image {
+max-width: 35%;
+margin-left:auto;
+}
+
+.media-description {
+display:block;
+text-align:right;
+font-size: small;
+padding: 0px;
+}
+
+/* The bottom two responsive layouts are directly from this link on https://www.w3schools.com/howto/howto_make_a_website.asp */
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
