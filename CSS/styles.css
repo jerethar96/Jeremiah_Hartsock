@@ -1,11 +1,88 @@
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
+} 
+
+   :root {
+        --main-bg-color: #9bc6e9;
+        --section-bg-color: #80c09d;
+    }
+
+
+.wrapper {
+margin: 2%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.wrapper > * {
+flex: 1 1 250px;
+margin: 2%;
+}
+
+/* This creates the flexible cards where I will pocket information */
+.card {
+display: flex;
+flex-direction: column;
+align-items: center;      /* center content in card */
+justify-content: center;  /* center content in card */
+padding: 0.625em;
+margin: 0.5em;
+color: darkslategray;
+background-color: var(--section-bg-color);
+font-family:'Playfair Display', serif;
+}
+
+
+.card img {
+max-width: 100%;
+  border-radius: 3%;
+  margin: 0 auto;
+}
+
+
+/* This "container" class lets me classify an area where I want to include overlay text */
+.container {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    height: auto;
+}
+
+/* This makes images responsive to the container class */
+.img{
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+/*create overlay text for images */
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #e7e2e2; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size:smaller;
+    font-family: 'Playfair Display', serif;
+}
+
+/* When container is moused over, the overlay fades in*/
+.container:hover .overlay{
+    opacity:1;
 }
 
 /* Style the body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
+    background-color: var(--main-bg-color);
 }
 
 /* I liked my span from the website idea project */
@@ -54,7 +131,9 @@ nav a {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+    font-family: 'Playfair Display', serif ;
 }
+
 
 /* Change color on hover */
 nav a:hover {
@@ -77,6 +156,7 @@ nav a:hover {
     flex: 20%;
     background-color: #b9b5b5;
     padding: 10px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 /*remove the margin for the 'About Me' heading */
@@ -92,10 +172,6 @@ main {
     -ms-flex: 80%;
     /* IE10 */
     flex: 80%;
-    background-image: url("https://images.unsplash.com/photo-1514810771018-276192729582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 20px;
 }
 
 /* Make initial headers generally align center in the MAIN class portion of the website
@@ -121,7 +197,6 @@ main p {
     position: relative;
     width: 100%;
     padding: 0px;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
     height: auto;
 }
 
@@ -160,7 +235,7 @@ main p {
     position: absolute;
     bottom: 0;
     background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    background: rgba(0, 0, 0, 0.3); /* Black background with 0.5 opacity */
     color: #f1f1f1;
     width: 100%;
     padding: 0px;
