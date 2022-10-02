@@ -30,7 +30,7 @@ row-gap: .5em;
 
 span {
     font-style: italic;
-    color: 	#931D9A;
+    color: 	#591d77;
 }
 
 header, footer, aside, section {
@@ -47,9 +47,9 @@ footer{
     text-align: right;
 }
 
-header, footer { background-color:rgb(55, 226, 175); }
+header, footer { background-color:#007a4b; }
 aside { 
-    background-color: plum; 
+    background-color: #7659b6; 
     align-items: center;
     justify-content: center;
 }
@@ -57,18 +57,22 @@ aside {
 aside h3, p{
     margin-bottom:0;
     font-size:large;
-    font-family:'Playfair Display', serif;
+    text-align: center;
 }
 
-section { background-color: steelblue;}
+section { background-color: #406098;
+text-align:left;}
+section p {
+    text-align:left;
+}
 
 
 .media-object {
 display: flex;
-align-items: center;
+align-items:flex-start;
 padding: 1em;
 border-radius: 1px;
-max-width: auto;
+max-width: 80%;
 }
 
 .media-image {
@@ -77,9 +81,12 @@ margin-left:auto;
 }
 
 .media-description {
-display:block;
-text-align:right;
-font-size: small;
+align-content:flex-end;
+overflow-wrap:break-word;
+max-width: 100px;
+display:flex;
+font-size: xx-small;
+font-family:'Courier New', Courier;
 padding: 0px;
 }
 
