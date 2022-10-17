@@ -22,6 +22,7 @@ margin: 2%;
 /* This creates the flexible cards where I will pocket information */
 .card {
 display: flex;
+border-radius: 2em;
 flex-direction: column;
 align-items: center;      /* center content in card */
 justify-content: center;  /* center content in card */
@@ -32,29 +33,10 @@ background-color: var(--section-bg-color);
 font-family:'Playfair Display', serif;
 }
 
-
-.card img {
-max-width: 100%;
-  border-radius: 3%;
-  margin: 0 auto;
+.card h1, h4 {
+    margin:0;
+    text-decoration: none;
 }
-
-
-/* This "container" class lets me classify an area where I want to include overlay text */
-.container {
-    position: relative;
-    width: 100%;
-    padding: 0px;
-    height: auto;
-}
-
-/* This makes images responsive to the container class */
-.img{
-    display:block;
-    width: 100%;
-    height: auto;
-}
-
 /*create overlay text for images */
 .overlay {
     position: absolute; 
@@ -81,10 +63,18 @@ max-width: 100%;
 /* Style the body */
 body {
     font-family: 'Playfair Display', serif;
+    font: 100%;
     margin: 0;
     background-color: var(--main-bg-color);
 }
-
+body h1 {
+    font-family:'Playfair Display', serif;
+    font:90%;
+    font-weight:500;
+    text-align:center;
+    margin:5px;
+    text-decoration: underline;
+}
 /* I liked my span from the website idea project */
 span {
     font-style: italic;
@@ -93,34 +83,64 @@ span {
 
 /* Header class for titles */
 header {
-    padding: 80px;
+    padding: 30px;
     text-align: center;
+    color: black;
+    background-color:#7659b6;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10px;
+}
+
+.journey {
+    font-size:x-large;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style:italic;
+    text-align: center;
+    text-decoration: underline;
+}
+
+footer, aside, section {
+    border-radius: 2em;
+    padding: 20px;
+    font-size: 130%;
+}
+
+.block {
+    display: block;
+    width: 50%;
+    border: 50px;
+    background-color: rgb(31, 121, 65);
+    color: white;
+    padding: 14px 28px;
+    margin:auto;
+    cursor: pointer;
+    text-align: center;
+    text-overflow:unset;
+    font-family: 'Playfair Display', serif;
+    font-size: large;
+}
+  
+.block:hover {
+    background-color: #ddd;
     color: black;
 }
 
 /* Increase the font size of the heading in the header class */
 header h1 {
-    font-size: 40px;
+    font-size: 50px;
+    font-style:italic;
+    font-weight: 700;
 }
-
-/* first background image */
-.bgimg-1 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-
-.bgimg-1 {
-    background-image: url('https://images.unsplash.com/photo-1583264609967-cc319eca64fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1755&q=80');
-    opacity: 80%
-}
-
 
 /* Style the top navigation bar */
 nav {
     overflow: hidden;
     background-color: rgb(31, 121, 65);
     opacity: 90%;
+    padding: 10px;
+    display: block;
+    margin: 0px;
 }
 
 /* Style the navigation bar links */
@@ -154,17 +174,24 @@ nav a:hover {
 .side {
     -ms-flex: 20%;
     flex: 20%;
+    margin:auto;
+    text-align: center;
     background-color: #b9b5b5;
     padding: 10px;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius:2.5em;
 }
 
 /*remove the margin for the 'About Me' heading */
 .side h3 {
     margin:0;
+    font-size:x-large;
+    font-family: 'Playfair Display', serif;
+    font-weight:700;
+    font-style:italic;
 }
 .side p {
-    font-size:70%;
+    font-size:110%;
 }
 
 /* Main column */
@@ -188,23 +215,42 @@ main h3 {
 }
 
 main p {
-    font-size: 80%;
+    font-size: 110%;
     font-family: 'Playfair Display', serif;
 }
 
 /* Image background and format */
 .container {
     position: relative;
-    width: 100%;
-    padding: 0px;
+    align-items:center;
+    text-align: center;
+    padding: 5px;
     height: auto;
+    display:block;
 }
 
-/* This makes images responsive */
+/* This makes images responsive in containers*/
 .img{
     display:block;
+    width:100%;
+    height:auto;
+    border-radius: 50%;
+}
+
+.img_card {
+    display:block;
     width: 100%;
-    height: auto;
+    height:auto;
+    border-radius:3%;
+}
+
+.logo{
+justify-content: center;
+text-align:center;
+display: block;
+border-width:5px;
+border-color:black;
+border-style:ridge;
 }
 
 /*create overlay text for images */
@@ -239,12 +285,12 @@ main p {
     color: #f1f1f1;
     width: 100%;
     padding: 0px;
-    font-size: small;
+    font-size: medium;
     font-family: 'Playfair Display', serif;
 }
 
 .content p {
-    font-size: x-small;
+    font-size: medium;
     font-family: 'Playfair Display', serif;
 }
 
@@ -262,4 +308,68 @@ main p {
         float: none;
         width: 100%;
     }
+}
+
+/* CSS for Academic Journey Page */
+
+aside { 
+    align-items: center;
+    justify-content: center;
+}
+
+aside h3, p{
+    font-size:large;
+    text-align: center;
+}
+
+section { background-color: #406098;
+text-align:left;}
+section p {
+    text-align:left;
+}
+
+.wrapper_a {
+display: flex;
+flex-direction: column;
+gap: .5em;
+row-gap: .5em;
+}
+
+.content-wrapper_a {
+display: flex;
+flex-direction: row;
+gap: .5em;
+row-gap: .5em;
+}
+
+@media (min-width: 64em) {
+    .content-wrapper_a {flex-direction:row;}
+        aside {flex: 1;}
+        section {flex:2;}
+    }
+
+
+
+
+.media-object {
+display: flex;
+align-items:flex-start;
+padding: 1em;
+max-width: 80%;
+}
+
+.media-image {
+max-width: 35%;
+margin-left:auto;
+
+}
+
+.media-description {
+align-content:flex-end;
+overflow-wrap:break-word;
+max-width: 100px;
+display:flex;
+font-size: xx-small;
+font-family:'Courier New', Courier;
+padding: 0px;
 }
