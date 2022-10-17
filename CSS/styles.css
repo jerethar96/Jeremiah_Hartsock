@@ -279,7 +279,7 @@ main p {
 .img_j{
     display:block;
     border-radius:3%;
-    min-width: 10%;
+    width: auto;
     height:auto;
     border-color:black;
     border-style:ridge;
