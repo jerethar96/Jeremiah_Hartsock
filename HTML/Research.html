@@ -1,72 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" wtx-context="11B47729-EB09-430E-BA04-F5C1BEBD1DE0">
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Responsive by default card layout with Flexbox</title>
-    <style>
-		   :root {
-			    --main-bg-color: #c1b195;
-			    --section-bg-color: #8bb19c; #c1b195;
-		   }
-       body {
-         font-family: Helvetica, 'sans-serif';
-         background-color: var(--main-bg-color);
-         margin: 0;
-       }
-       .wrapper {
-         margin: 2%;
-         display: flex;
-         flex-wrap: wrap;
-       }
-       .wrapper > * {
-         flex: 1 1 250px;
-         margin: 2%;
-       }
-
-       .card {
-         display: flex;
-         flex-direction: column;
-         align-items: center;      /* center content in card */
-         justify-content: center;  /* center content in card */
-         padding: 0.625em;
-         margin: 0.5em;
-         color: darkslategray;
-         background-color: var(--section-bg-color);
-       }
-
-       img {
-         max-width: 100%;
-		     border-radius: 3%;
-		     margin: 0 auto;
-	   }
-	  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremiah's Personal Portfolio</title>
+    <link rel="stylesheet" href="../CSS/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper">
-       <div class="card">
-          <img src="https://assets.codepen.io/108450/straw-berry.jpg" alt="Strawberries">
-          <p>Useful info about strawberries goes here</p>
-       </div>
-       <div class="card">
-          <img src="https://assets.codepen.io/108450/straw-berry.jpg" alt="Strawberries">
-          <p>More useful info about strawberries goes here</p>
-       </div>
-       <div class="card">
-          <img src="https://assets.codepen.io/108450/straw-berry.jpg" alt="Strawberries">
-          <p>And more useful info about strawberries goes here</p>
-       </div>
-       <div class="card">
-          <img src="https://assets.codepen.io/108450/straw-berry.jpg" alt="Strawberries">
-          <p>Useful info about strawberries goes here</p>
-       </div>
-       <div class="card">
-          <img src="https://assets.codepen.io/108450/straw-berry.jpg" alt="Strawberries">
-          <p>More useful info about strawberries goes here</p>
-       </div>
-    </div>
- 
- 
- <div style="position: static !important;"></div></body>
- </html>
-   
+   <nav>
+      <a href="https://drive.google.com/file/d/1ScNad3DzXooUfDeeA0UxuKsgQQ9wQtGL/view?usp=sharing">Resume</a>
+      <a href="https://drive.google.com/drive/u/0/folders/1NrPq_hdtNEXeqGLsJPTZhCVELDSo_kER">Project Folder</a>
+      <a href="https://github.com/jerethar96">Github</a>
+      <a href="../index.html">Return Home</a>
+   </nav>
+   <header>
+      <h1>Example Research Studies</h1>
+      <p>A look at the research studies I assisted with implementing</p>
+   </header>
+   <h1>Current Ventures</h1>
+   <div class="wrapper">
+      <div class="card">
+         <h1>Helping Giving Away Psychological Science</h1>
+         <div class="container">
+            <img class="logo" src="../Images/hgaps_logo.png" alt="HGAPS">
+         </div>
+         <p> The studies here have no names currently; however, the idea is about information dissemination. 
+            The first round involves a collection of mental health resources from clinicians </p>
+      </div>
+      <div class="card">
+         <h1>STARR NC</h1>
+         
+         <p> Although this study does not have a logo yet, it does have a clinical trials page.</p>
+      </div>
+   </div>
+   <h1>BATLab Studies</h1>
+   <div class="wrapper">
+      <div class="card">
+         <h1>AllyQuest</h1>
+         <div class="container">
+            <img class="logo" src="../Images/aq_logo.png" alt="AllyQuest">
+         </div>
+      </div>
+      <div class="card">
+         <h1>P3</h1>
+         <h4>(Prepared, Protected, emPowered)</h4>
+         <div class="container">
+            <img class="logo" src="../Images/p3_logo.jpg" alt="P3">
+         </div>
+      </div>
+      <div class="card">
+         <h1>HMP</h1>
+         <h4>(Health eMPowerment)</h4>
+         <div class="container">
+            <img class="logo" src="../Images/hmp_logo.png" alt="hmp">
+         </div>
+      </div>
+   </div>
+   <h1>HARP Studies</h1>
+   <div class="wrapper">
+      <div class="card">
+         <h1>CONNECT</h1>
+         <div class="container">
+            <img class="logo" src="../Images/connect_logo.jpg" alt="CONNECT">
+         </div>
+      </div>
+      <div class="card">
+         <h1>Avenir</h1>
+         <div class="container">
+            <img class="logo" src="../Images/avenir_logo.png" alt="avenir">
+         </div>
+      </div>
+   </div>
+</body>
