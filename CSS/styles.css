@@ -12,6 +12,9 @@ box-sizing: border-box;
 margin: 2%;
 display: flex;
 flex-wrap: wrap;
+padding-right:16px;
+padding-left:16px;
+padding-bottom:32px;
 }
 
 .wrapper > * {
@@ -26,16 +29,34 @@ border-radius: 2em;
 flex-direction: column;
 align-items: center;      /* center content in card */
 justify-content: center;  /* center content in card */
-padding: 0.625em;
-margin: 0.5em;
-color: darkslategray;
+padding: 2.0em;
+margin: 0 2%;
+flex-grow:1;
 background-color: var(--section-bg-color);
 font-family:'Playfair Display', serif;
 }
 
+.card_j{
+    display:flex;
+    background:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:2.0em;
+    margin:0 2%;
+    flex-grow:1;
+    font-family:'Playfair Display', serif;
+}
+
+
 .card h1, h4 {
     margin:0;
     text-decoration: none;
+}
+.card section {
+    background-color: #406098;
+    text-align:left;
+    padding:0;
 }
 /*create overlay text for images */
 .overlay {
@@ -110,7 +131,7 @@ footer, aside, section {
     display: block;
     width: 50%;
     border: 50px;
-    background-color: rgb(31, 121, 65);
+    background-color: #1F7941;
     color: white;
     padding: 14px 28px;
     margin:auto;
@@ -136,12 +157,30 @@ header h1 {
 /* Style the top navigation bar */
 nav {
     overflow: hidden;
-    background-color: rgb(31, 121, 65);
+    background-color: #1F7941;
     opacity: 90%;
     padding: 10px;
     display: block;
     margin: 0px;
+    width:100%;
 }
+/* Remove the navigation items on small screen */
+#navitems {
+    display:none;
+}
+#navitems a {
+    display:block;
+    box-sizing:border-box;
+    border-top:.05em solid #1F7941;
+}
+nav label { /* Styles for the hamburger icon */ 
+    display: inline-block; color: #2F4F4F; background: #1F7941); 
+    font-size: 1.2em; padding: .5em; 
+} 
+/* Toggle the hamburger icon to show/hide menu */ 
+/* Don't display the checkbox, just the hamburger label */ 
+#hamburger { display: none; }
+nav input:checked ~ #navitems {display:block;} 
 
 /* Style the navigation bar links */
 nav a {
@@ -222,36 +261,52 @@ main p {
 /* Image background and format */
 .container {
     position: relative;
-    align-items:center;
+    justify-content: center;
     text-align: center;
-    padding: 5px;
+    padding:5px;
     height: auto;
     display:block;
+    flex-direction:column;
 }
 
-/* This makes images responsive in containers*/
-.img{
+/* this is for my profile pciture*/
+.img_prof{
     display:block;
     width:100%;
     height:auto;
     border-radius: 50%;
 }
+.img_j{
+    display:block;
+    border-radius:3%;
+    min-width: 10%;
+    height:auto;
+    border-color:black;
+    border-style:ridge;
+}
 
 .img_card {
     display:block;
-    width: 100%;
+    max-width: 100%;
     height:auto;
     border-radius:3%;
+    border-color:black;
+    border-style:ridge;
 }
 
-.logo{
-justify-content: center;
-text-align:center;
-display: block;
-border-width:5px;
-border-color:black;
-border-style:ridge;
+.container_aside {
+    position:relative;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 20px;
+    display:block;
 }
+.img_aside {
+    display:flex;
+    width:100%;
+    height:100%;
+}
+
 
 /*create overlay text for images */
 .overlay {
@@ -276,7 +331,7 @@ border-style:ridge;
     opacity:1;
 }
 
-/* Putting text on an image */
+/* Putting text on an image overlay*/
 .container .content {
     position: absolute;
     bottom: 0;
@@ -294,21 +349,8 @@ border-style:ridge;
     font-family: 'Playfair Display', serif;
 }
 
-/* The bottom two responsive layouts are directly from this link on https://www.w3schools.com/howto/howto_make_a_website.asp */
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-    .row {
-        flex-direction: column;
-    }
-}
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-    .navbar a {
-        float: none;
-        width: 100%;
-    }
-}
+
 
 /* CSS for Academic Journey Page */
 
@@ -328,26 +370,14 @@ section p {
     text-align:left;
 }
 
-.wrapper_a {
-display: flex;
-flex-direction: column;
-gap: .5em;
-row-gap: .5em;
-}
 
 .content-wrapper_a {
 display: flex;
 flex-direction: row;
+justify-content: center;
 gap: .5em;
 row-gap: .5em;
 }
-
-@media (min-width: 64em) {
-    .content-wrapper_a {flex-direction:row;}
-        aside {flex: 1;}
-        section {flex:2;}
-    }
-
 
 
 
@@ -372,4 +402,28 @@ display:flex;
 font-size: xx-small;
 font-family:'Courier New', Courier;
 padding: 0px;
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 37.5em){ 
+    #navitems { display: flex; justify-content: left;} 
+    nav label, #hamburger { display: none; } 
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+/* Responsive layout - when the screen is less than 400px wide, make cards stack on top of eachother */
+
+@media (min-width: 64em) {
+.content-wrapper_a {flex-direction:row;}
+ }
+
 }
