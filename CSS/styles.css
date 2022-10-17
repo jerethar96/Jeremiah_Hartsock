@@ -174,9 +174,11 @@ nav {
     border-top:.05em solid #1F7941;
 }
 nav label { /* Styles for the hamburger icon */ 
-    display: inline-block; color: #2F4F4F; background: #1F7941); 
-    font-size: 1.2em; padding: .5em; 
+    display: inline-block; color: #2F4F4F; background: #1F7941; 
+    font-size: 1.2em; 
+    padding: .5em; 
 } 
+
 /* Toggle the hamburger icon to show/hide menu */ 
 /* Don't display the checkbox, just the hamburger label */ 
 #hamburger { display: none; }
@@ -279,8 +281,7 @@ main p {
 .img_j{
     display:block;
     border-radius:3%;
-    width: auto;
-    height:auto;
+    width:125%;
     border-color:black;
     border-style:ridge;
 }
@@ -426,4 +427,3 @@ padding: 0px;
 .content-wrapper_a {flex-direction:row;}
  }
 
-}
