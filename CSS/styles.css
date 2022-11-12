@@ -350,6 +350,17 @@ main p {
     font-family: 'Playfair Display', serif;
 }
 
+ #video1 { max-width: 95%; 
+border-color:rgb(0, 0, 0);
+border-style:ridge;
+border-radius: 3px;}
+
+ #controls { padding: 5px; }
+ i {
+    margin: 0 10px;
+    color: #7659b6;
+ }
+
 
 
 
