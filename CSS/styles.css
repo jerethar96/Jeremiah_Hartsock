@@ -54,10 +54,12 @@ font-family:'Playfair Display', serif;
     text-decoration: none;
 }
 .card section {
-    background-color: #406098;
+    background-color: #7888a3;
     text-align:left;
     padding:0;
 }
+
+
 /*create overlay text for images */
 .overlay {
     position: absolute; 
@@ -107,7 +109,7 @@ header {
     padding: 30px;
     text-align: center;
     color: black;
-    background-color:#7659b6;
+    background-color:#927dbe;
     font-family: 'Playfair Display', serif;
     margin-top: 10px;
 }
@@ -383,14 +385,16 @@ section p {
 }
 
 
-.content-wrapper_a {
+.content-wrapper_column {
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
 gap: .5em;
 row-gap: .5em;
 }
-
+.content-wrapper_column section{
+    background-color: #7888a3;
+}
 
 
 .media-object {
@@ -435,6 +439,6 @@ padding: 0px;
 /* Responsive layout - when the screen is less than 400px wide, make cards stack on top of eachother */
 
 @media (min-width: 64em) {
-.content-wrapper_a {flex-direction:row;}
+.content-wrapper_column {flex-direction:column;}
  }
 
