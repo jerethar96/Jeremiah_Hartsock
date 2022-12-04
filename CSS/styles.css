@@ -100,8 +100,8 @@ body h1 {
 }
 /* I liked my span from the website idea project */
 span {
-    font-style: italic, bold;
-    color: 	#900397;
+    font-style:oblique;
+    color: 	rgb(139, 0, 0);
 }
 
 /* Header class for titles */
