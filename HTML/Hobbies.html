@@ -53,13 +53,7 @@
      </div>
      <div class="card">
         <div class = "container">
-           <video id="video1" poster="../Images/THV.jpg">
-              <source src="https://video-downloads.googleusercontent.com/AL1BwWaa-6RuxqB7ZqPoUup4bywUJm2eNTTPIKPpKBbejqvnNXkJWmyvkXsbdtrb5xyHy9SpEL2TtnBlyqY7DX84VwDPd2x4AsgNMOLfQE-ixrZ3RfZgT7bZNG2WqJDuY6s3t-_HDntTW-iHw2DfAHNdnz1XbhBabFnB-Y2WAQ_fhPfNufhRPy7RRTv5a8DP-NeGBU2wBCGylULbQ9C33KyXCiOazfvVL96vGD8bwgnxAz9IKEqHB7hWwEVaQ8wxQatF0HJb-E--4oqJ63BnD8z9ct4MNw0Ba5qMv8RyhA-fc28loyIY3n7gzQ1WS8Ih1hGcbZ0Y4oDZBDfhWx_63HphfpiuXs_Q3anB9UkJ0PEOT6in1uzYZl84JipplnRWV0p3Mh1vkPQZWaZqv8g_yOmD-0YeTPXEcyqx5uKZlzFkHYbYf_GifyQFTHL3bCu9LjazJbpTyg8qIhKnA5i5JcuVT1Fb-N2yYWgVgjXBaUyCrWrCmmf4_fzhWBb_oeO9UbgQIrMvmp0srR1bSCxbgMV97LqDGt70BvfQjCmMPjLc1FF0eJz5CyBaB43K_t1pxra6EtUaJcMiIL1M7D8LYlKN4P125M3XcyIaMw0v7gSjTxNDCLxGYgYpvGm_1_bocfX95IRiOedeUTBorlUay69nNLtvvM4J4WoCrPHGJU5YfTukIxIDP2rFTO0tPuLUE1Rp5X9JVRbqj7QxbF-PDnm18tczj13FEJkBep1eBpAUlRb-Tuf4AysuPR217AW3yA-TxCT-0z_iRE9AlfQ2QtSvQsxhnNJUoaDRZyI-hWl1_05t_W_kRsrHhwsxjzMFTkiIS-E2PYvZwsIxrfUXIvk18InepU2Y5QZi8r-1ZtnRKrgTF_KrxeYu6h_eQAL97IGdV4GbQyletr79rwoYzXLZdDYGn8S66Dw17HhxlJS3UQmWuvDbL3L0QacdxsevwYl2s--2cFKzTLLxhI-8MjxEf3ggqstN4v8TNp3z9-9JyP5NPkcbSBCqTzgHGLd7TnYYOBf5sU3B8HBdl9F0bIvlxQHWx6_5SJeYqXqdnAqpsGdBTyryRhcutyi5ti8LS3nVaGYER6es_tI2oPNb_dwTnwvZniWNi7HonuUVc607tYCTHJuFCoPPAtitWwIx9PxHyjM-tKSt" type="video/mp4"/>
-            </video>
-            <div id="controls">
-              <i id="playpause" class="far fa-play-circle fa-2x" aria-hidden="true"></i>
-              <i id="stop" class="far fa-stop-circle fa-2x" aria-hidden="true"></i>
-            </div>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Ku6CSXvEen0" ></iframe>
             <p><span>Video from my first Acapella concert with </span><a href="https://www.unctarheelvoices.com/about-thv">Tar Heel Voices</a>
             <span>(Fall 2015)</span></p>
             </div>
@@ -67,33 +61,6 @@
         <p>Beyond choir and solo voice music, I also sang (and in this case "rapped") in college acapella</p>
       </div>
     </div>
-    <div style="position: static !important;"></div>
-    <script>
-        var myVideo = document.querySelector("#video1");
-        
-        var playPauseButton = document.querySelector("#playpause");
-        playPauseButton.addEventListener('click', playPause);
-        
-        var stopButton = document.querySelector("#stop");
-        stopButton.addEventListener('click', stop);
-        
-        function playPause() {
-            if (myVideo.paused) {
-                myVideo.play();
-                playPauseButton.className = "far fa-pause-circle fa-2x";
-            }
-            else  {
-                myVideo.pause();
-                playPauseButton.className = "far fa-play-circle fa-2x";
-            }
-        }
-        
-        function stop() {
-            myVideo.pause();
-            myVideo.currentTime = 0;
-            playPauseButton.className = "far fa-play-circle fa-2x";
-        }
-    </script>
-   
+    <div style="position: static !important;"></div>     
 </body>
 </html>
